@@ -1,0 +1,23 @@
+@import './abstracts/variables';
+
+//ESTILOS BASES
+@import './base/base';
+@import './base/typography';
+
+//COMPONENTES PEQUEÑOS
+@import './components/animacion';
+@import './components/buttons';
+@import './components/form.fields';
+@import './components//icons';
+
+//LAYOUT GENERAL
+@import './layout/carousel';
+@import './layout/formulario';
+@import './layout/navbar.';
+@import './layout/responsive';
+
+//SECCIONES DEL PROYECTO
+@import './pages/about';
+@import './pages/hero.';
+@import './pages/proyects';
+@import './pages/technologies';

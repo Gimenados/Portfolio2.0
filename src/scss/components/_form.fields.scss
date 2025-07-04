@@ -1,0 +1,31 @@
+label {
+  color: white;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-top: 15px;
+  background: rgba(255, 255, 255, 0.05); // fondo translúcido
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+  box-shadow: inset 0 0 4px rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
+  outline: none;
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  &:focus {
+    border-color: #ff00cc;
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 8px rgba(255, 0, 204, 0.3);
+  }
+}

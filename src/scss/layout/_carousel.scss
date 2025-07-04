@@ -1,0 +1,56 @@
+.carrusel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 20px 0;
+}
+
+.carrusel-container {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-start; /* Alinea los elementos al inicio */
+  width: 100%;
+  max-width: 600px;
+  overflow: hidden;
+}
+
+.carrusel-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 5em;
+  text-align: center;
+  padding: 20px;
+}
+
+.carrusel-track {
+  display: flex;
+  gap: 40px;
+  width: max-content;
+  animation: scrollLeft 15s linear infinite;
+}
+
+.carrusel-item img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.carrusel-item p {
+  font-size: 1rem;
+  color: transparent !important;
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translate3d(0, 0, 0); /* Inicia en la posición original */
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0); /* Desplaza la mitad del ancho del track */
+  }
+}

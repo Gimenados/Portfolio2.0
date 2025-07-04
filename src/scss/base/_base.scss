@@ -1,0 +1,13 @@
+@import '../abstracts/variables';
+
+* {
+  font-family: $font-main;
+}
+
+body {
+  background: $bg-gradient;
+  font-weight: 200;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}

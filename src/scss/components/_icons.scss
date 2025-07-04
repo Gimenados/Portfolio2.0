@@ -1,0 +1,22 @@
+@import '../abstracts/variables';
+
+// ICONOS
+
+.icon-navbar {
+  vertical-align: sub;
+  margin: 0 8px;
+}
+
+.icon {
+  fill: rgb(5, 5, 5);
+  transition: fill $transition-fast;
+  height: 55px;
+  width: 55px;
+}
+
+.content {
+  position: relative;
+  height: 20vh;
+  text-align: center;
+  background-color: white;
+}

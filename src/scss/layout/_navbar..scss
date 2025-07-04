@@ -1,0 +1,73 @@
+@import '../abstracts/variables';
+
+// HEADER Y NAVBAR
+
+.nav-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0;
+  width: 100%;
+}
+
+header {
+  @include flex-center;
+  align-items: center;
+  backdrop-filter: blur(4px);
+  border-radius: 10px;
+  opacity: 0.9;
+  box-shadow: 0 4px 8px $color-shadow;
+  position: fixed;
+  width: 60%;
+  z-index: 1000;
+
+  nav ul {
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 10px 0;
+    list-style: none;
+
+    li {
+      font-size: 22px;
+      margin: 0 10px;
+      transition: opacity $transition-fast;
+
+      &.icon {
+        opacity: 1;
+        pointer-events: none;
+      }
+
+      a {
+        color: white;
+        display: inline-block;
+        font-weight: 400;
+        text-decoration: none;
+        transition: color $transition-fast;
+
+        &::after {
+          content: '';
+          position: relative;
+          bottom: -2px;
+          left: 0;
+          height: 2px;
+          width: 0;
+          background-color: currentColor;
+          transition: width $transition-fast;
+        }
+      }
+
+      &:hover a::after {
+        width: 100%;
+      }
+    }
+
+    &:hover li {
+      opacity: 0.6;
+
+      &.icon,
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}

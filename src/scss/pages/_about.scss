@@ -1,0 +1,62 @@
+@import '../abstracts/variables';
+
+// SOBRE MI
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-title {
+  opacity: 1;
+  transform: translateY(50px);
+  font-size: 50px;
+  margin: 2.5rem 0 5.5rem;
+  transition: all $transition-medium;
+
+  &.animate {
+    opacity: 0;
+    transform: translateY(0);
+  }
+}
+
+.about-container {
+   display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  width: 50%;
+  margin-left: 50px;
+}
+
+.perfil-img {
+  border-radius: 50%;
+  border: 2px solid $color-border;
+  margin: 10px 40px 10px 20px;
+  height: 250px;
+  width: 250px;
+  z-index: 5;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.waves {
+  position: relative;
+  width: 100%;
+  height: 15vh;
+  margin-bottom: -7px;
+  min-height: 100px;
+  max-height: 150px;
+}

@@ -1,0 +1,43 @@
+@import '../abstracts/variables';
+
+.form-glow {
+  position: relative;
+  padding: 35px;
+  max-width: 70rem;
+  margin: auto;
+  background-color: #0a0a23 !important; // Fondo oscuro y limpio
+  // border-radius: 16px;
+  z-index: 1;
+  overflow: hidden;
+
+   &:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    // border-radius: 16px;
+    padding: 2px; /* grosor del borde */
+    background: linear-gradient(45deg, #ff00cc, #00c3ff, #ff00cc);
+    background-size: 400% 400%;
+    animation: glow-border 6s ease infinite;
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    z-index: -1;
+  }
+}
+
+@keyframes glow-border {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
