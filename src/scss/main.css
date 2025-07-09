@@ -198,7 +198,7 @@ label {
 input,
 textarea {
   width: 100%;
-  padding: 12px 15px;
+  padding: 12px 5px;
   margin-top: 15px;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -315,7 +315,7 @@ textarea:focus {
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 2px; /* grosor del borde */
+  padding: 2px;
   background: linear-gradient(45deg, #ff00cc, #00c3ff, #ff00cc);
   background-size: 400% 400%;
   animation: glow-border 6s ease infinite;

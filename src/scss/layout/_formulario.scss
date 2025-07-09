@@ -5,8 +5,7 @@
   padding: 35px;
   max-width: 70rem;
   margin: auto;
-  background-color: #0a0a23 !important; // Fondo oscuro y limpio
-  // border-radius: 16px;
+  background-color: #0a0a23 !important;
   z-index: 1;
   overflow: hidden;
 
@@ -21,8 +20,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    // border-radius: 16px;
-    padding: 2px; /* grosor del borde */
+    padding: 2px; 
     background: linear-gradient(45deg, #ff00cc, #00c3ff, #ff00cc);
     background-size: 400% 400%;
     animation: glow-border 6s ease infinite;
