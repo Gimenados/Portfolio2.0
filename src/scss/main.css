@@ -20,7 +20,6 @@ body {
   background: radial-gradient(ellipse, #030d2b, #02071A, #030d2b);
   font-weight: 200;
   margin: 0;
-  padding: 0;
   text-align: center;
 }
 
@@ -532,12 +531,6 @@ header nav ul:hover li.icon, header nav ul:hover li:hover {
   margin-bottom: 0px;
   padding-bottom: 0px;
 }
-#proyectos .about-title {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
-  color: #000d48;
-}
 #proyectos .card-container {
   display: flex;
   flex-wrap: nowrap;
@@ -606,11 +599,14 @@ header nav ul:hover li.icon, header nav ul:hover li:hover {
   }
 }
 #proyectos .card a {
+  display: block;
+  width: 100%;
+  text-align: center;
   background: linear-gradient(to right, #6a11cb, #2575fc);
   color: white;
   border: none;
   text-decoration: none;
-  padding: 10px 20px;
+  padding: 10px 0;
   font-weight: bold;
   transition: linear-gradient(50deg, #ff00c8, #dc00ff, #15085c) 0.3s ease;
 }
