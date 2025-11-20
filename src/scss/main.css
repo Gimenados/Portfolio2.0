@@ -19,6 +19,11 @@
 body {
   background: radial-gradient(ellipse, #030d2b, #02071A, #030d2b);
   font-weight: 200;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
   margin: 0;
   text-align: center;
 }
@@ -399,20 +404,54 @@ header nav ul:hover li.icon, header nav ul:hover li:hover {
   opacity: 1;
 }
 
-@media (max-width: 768px) {
-  nav ul {
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  position: absolute;
+  left: 20px;
+  top: 15px;
+  z-index: 2000;
+}
+.hamburger span {
+  width: 30px;
+  height: 3px;
+  background: white;
+  border-radius: 5px;
+}
+
+@media (max-width: 950px) {
+  header {
+    width: 100%;
+    justify-content: flex-start;
+    padding-left: 60px;
+  }
+  .navbar-links {
+    display: none !important;
+  }
+  .navbar-hamburger {
+    display: block !important;
+  }
+  .hamburger {
+    display: flex !important;
+    margin: 0 0 0 1.5rem;
+  }
+  header nav ul {
+    display: none;
     flex-direction: column;
-    gap: 0.5rem;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 20px;
+    border-radius: 10px;
+    width: 220px;
+    gap: 15px;
+    z-index: 2500;
   }
-  .card-container {
-    flex-direction: column;
-    align-items: center;
-  }
-  .hero h1 {
-    font-size: 2rem;
-  }
-  .wrapper img.cover-image {
-    height: auto;
+  header nav.open ul {
+    display: flex;
   }
 }
 .container {
@@ -436,7 +475,7 @@ header nav ul:hover li.icon, header nav ul:hover li:hover {
 .about-container {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   flex-direction: row;
 }
 
@@ -567,15 +606,15 @@ header nav ul:hover li.icon, header nav ul:hover li:hover {
 }
 #proyectos .card .wrapper {
   overflow: hidden;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  line-height: 0;
 }
 #proyectos .card .wrapper .cover-image {
   width: 100%;
   height: 300px;
   object-fit: cover;
   transition: transform 0.3s ease;
-}
-#proyectos .card .wrapper .cover-image:hover {
-  transform: scale(1.05);
 }
 #proyectos .card .character {
   animation: float 3s ease-in-out infinite;

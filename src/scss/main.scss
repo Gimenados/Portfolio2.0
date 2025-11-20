@@ -1,23 +1,24 @@
 @import './abstracts/variables';
 
-//ESTILOS BASES
+// ESTILOS BASES
 @import './base/base';
 @import './base/typography';
 
-//COMPONENTES PEQUEÑOS
+// COMPONENTES PEQUEÑOS
 @import './components/animacion';
 @import './components/buttons';
 @import './components/form.fields';
 @import './components//icons';
 
-//LAYOUT GENERAL
+// LAYOUT GENERAL
 @import './layout/carousel';
 @import './layout/formulario';
-@import './layout/navbar.';
-@import './layout/responsive';
+@import './layout/navbar.'; 
 
-//SECCIONES DEL PROYECTO
+// SECCIONES DEL PROYECTO
 @import './pages/about';
 @import './pages/hero.';
 @import './pages/proyects';
 @import './pages/technologies';
+
+@import './layout/responsive';

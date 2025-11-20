@@ -1,7 +1,5 @@
 @import '../abstracts/variables';
 
-// HEADER Y NAVBAR
-
 .nav-container {
   display: flex;
   justify-content: space-around;
@@ -69,5 +67,62 @@ header {
         opacity: 1;
       }
     }
+  }
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  position: absolute;
+  left: 20px;
+  top: 15px;
+  z-index: 2000;
+
+  span {
+    width: 30px;
+    height: 3px;
+    background: white;
+    border-radius: 5px;
+  }
+}
+
+@media (max-width: 950px) {
+  header {
+    width: 100%;
+    justify-content: flex-start;
+    padding-left: 60px;
+  }
+
+  .navbar-links {
+    display: none !important;
+  }
+
+  .navbar-hamburger {
+    display: block !important;
+  }
+
+  .hamburger {
+    display: flex !important;
+    margin: 0 0 0 1.5rem;
+  }
+
+  header nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background: rgba(0,0,0,0.85);
+    padding: 20px;
+    border-radius: 10px;
+    width: 220px;
+    gap: 15px;
+    z-index: 2500;
+  }
+
+  header nav.open ul {
+    display: flex;
   }
 }

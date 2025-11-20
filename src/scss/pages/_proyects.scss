@@ -36,6 +36,7 @@
     
     .card:hover {
       transform: translateY(-5px);
+      
     }
     &:hover {
       transform: translateY(-10px);
@@ -44,16 +45,15 @@
     
     .wrapper {
       overflow: hidden;
+      margin-bottom: 0;   
+      padding-bottom: 0; 
+      line-height: 0;     
       
       .cover-image {
         width: 100%;
         height: 300px;
         object-fit: cover;
         transition: transform 0.3s ease;
-
-        &:hover {
-          transform: scale(1.05);
-        }
       }
     }
 
