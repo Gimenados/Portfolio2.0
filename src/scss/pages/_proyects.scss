@@ -7,9 +7,11 @@
 
   .card-container {
     display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
+  flex-wrap:wrap;
     gap: 2rem;
+     max-width:20rem;
+  margin: 0 auto;     
+  padding: 0 2rem;    
   }
   
   .badge {
@@ -29,6 +31,7 @@
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     overflow: visible;
     width: 300px;
+      flex: 1 1 clamp(220px, 28vw, 320px);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
     position: relative;
