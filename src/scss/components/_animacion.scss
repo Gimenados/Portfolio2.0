@@ -1,48 +1,52 @@
 .ring {
   position: relative;
-  display: block;
-  width: 25rem !important;
-  height: 25rem !important;
-  margin: 0 69px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: clamp(15rem, 25vw, 25rem);
+  height: clamp(15rem, 25vw, 25rem);
+  margin: 5rem;
 
   i {
     position: absolute;
-    border: 2px solid #470a7c;
+    border: 0.2rem solid #470a7c;
     border-radius: 50%;
-    display: block !important;
+    display: block;
+    transition: border 0.3s ease, filter 0.3s ease;
 
     &:nth-child(1) {
       width: 100%;
       height: 100%;
       animation: animate 6s linear infinite;
-
-      &:hover {
-        border: 4px solid #aa1f6e;
-        filter: drop-shadow(0 0 20px #aa1f6e);
-      }
     }
 
     &:nth-child(2) {
       width: 110%;
       height: 110%;
       animation: animate 4s linear infinite;
-
-      &:hover {
-        border: 4px solid #470a7c;
-        filter: drop-shadow(0 0 20px #470a7c);
-      }
     }
 
     &:nth-child(3) {
       width: 120%;
       height: 120%;
       animation: animate2 10s linear infinite;
-
-      &:hover {
-        border: 4px solid #0b4066;
-        filter: drop-shadow(0 0 20px #0b4066);
-      }
     }
+  }
+
+  // HOVER SOBRE TODO EL CÍRCULO
+  &:hover i:nth-child(1) {
+    border: 0.25rem solid #aa1f6e;
+    filter: drop-shadow(0 0 20px #aa1f6e);
+  }
+
+  &:hover i:nth-child(2) {
+    border: 0.25rem solid #470a7c;
+    filter: drop-shadow(0 0 20px #470a7c);
+  }
+
+  &:hover i:nth-child(3) {
+    border: 0.25rem solid #0b4066;
+    filter: drop-shadow(0 0 20px #0b4066);
   }
 }
 

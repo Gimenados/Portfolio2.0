@@ -30,7 +30,7 @@ const Footer = () => {
       <div className="content flex">
         <footer>
           <h3 className="h3-footer">© 2025 Todos los derechos reservados</h3>
-          <p className="p-footer">Página hecha con ❤️ por Gimena Sande</p>
+          <p className="p-footer">Página hecha con ❤️ por Gime Sande</p>
         </footer>
       </div>
     </div>

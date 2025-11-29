@@ -67,19 +67,32 @@
 
   .about-container {
     flex-wrap: wrap;
+    flex-direction: column
   }
 
   .ring {
-    margin-top: 10px !important;
+    margin-top: 30px!important;
   }
 
   .container-tecnology {
     flex-direction: column;
   } 
+
+  .text-container {
+    width: 85%;
+    margin: 0px 10px !important;
+  }
 }
 
 @media (max-width: 800px) {
   .form-glow {
     margin: 0px 10rem !important;
+  }
+}
+
+@media (max-width: 730px) {
+  .hero h2 { 
+    margin: 0 5rem !important;
+    font-size: 5rem;
   }
 }
