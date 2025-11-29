@@ -60,4 +60,26 @@
   .hero h2 {
     font-size: 6.5rem;
   }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  .about-container {
+    flex-wrap: wrap;
+  }
+
+  .ring {
+    margin-top: 10px !important;
+  }
+
+  .container-tecnology {
+    flex-direction: column;
+  } 
+}
+
+@media (max-width: 800px) {
+  .form-glow {
+    margin: 0px 10rem !important;
+  }
 }

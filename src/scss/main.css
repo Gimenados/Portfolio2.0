@@ -69,8 +69,8 @@ p {
 .ring {
   position: relative;
   display: block;
-  width: 250px;
-  height: 250px;
+  width: 25rem !important;
+  height: 25rem !important;
   margin: 0 69px 0 0;
 }
 .ring i {
@@ -445,6 +445,7 @@ header nav ul:hover li.icon, header nav ul:hover li:hover {
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  margin: 0px 15px;
 }
 
 .text-container {
@@ -718,5 +719,22 @@ article {
   }
   .hero h2 {
     font-size: 6.5rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  .about-container {
+    flex-wrap: wrap;
+  }
+  .ring {
+    margin-top: 10px !important;
+  }
+  .container-tecnology {
+    flex-direction: column;
+  }
+}
+@media (max-width: 800px) {
+  .form-glow {
+    margin: 0px 10rem !important;
   }
 }
