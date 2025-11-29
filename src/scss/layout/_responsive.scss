@@ -62,7 +62,7 @@
   }
 
   h3 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .about-container {
@@ -94,6 +94,12 @@
   .hero h2 { 
     margin: 0 5rem !important;
     font-size: 5rem;
+  }
+}
+
+@media (max-width: 600px) {
+   .about-title {
+    font-size: 3.5rem;
   }
 }
 
@@ -140,10 +146,21 @@
   .about-title {
     font-size: 3.5rem;
   }
+  .section-avatar {
+    margin: 0 0 1rem 0 !important;
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
+  }
   .avatar {
-    width: 7rem !important;   
+    width: 5rem !important;   
     margin-bottom: 0px !important;
     transform: translateX(0) !important;  
+  }
+  .container-tecnology {
+    flex-direction: column-reverse !important;
+    align-items: center !important;
+    text-align: left;  
   }
 }
 
@@ -152,6 +169,6 @@
     font-size: 3rem;
   }
    p {
-    font-size: 0.5rem;
+    font-size: 0.6rem;
   }
 }

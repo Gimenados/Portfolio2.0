@@ -16,7 +16,7 @@ const Technologies = () => {
   return (
     <article id="tecnology">
       <h2 className="about-title">Tecnologías</h2>
-      <div className="container-tecnology" style={{ display: 'flex', alignItems: 'center' }}>
+      <div className="container-tecnology" style={{ display: 'flex' }}>
         <div style={{ flex: 1 }}>
           <p style={{ color: 'white', fontWeight: '2.5rem', textAlign: 'justify', lineHeight: '2' }}>
             Mi pasión y enfoque principal es el desarrollo Frontend, aunque cuento con una formación FullStack que me brinda una visión integral del desarrollo web.
