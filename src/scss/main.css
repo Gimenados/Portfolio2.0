@@ -744,14 +744,22 @@ article {
     margin: 0px 10px !important;
   }
 }
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .form-glow {
-    margin: 0px 10rem !important;
+    margin: 0px 6rem !important;
   }
 }
 @media (max-width: 730px) {
   .hero h2 {
     margin: 0 5rem !important;
     font-size: 5rem;
+  }
+}
+@media (max-width: 540px) {
+  .hero h2 {
+    font-size: 4rem;
+  }
+  .hero p {
+    font-size: 0.6rem;
   }
 }
