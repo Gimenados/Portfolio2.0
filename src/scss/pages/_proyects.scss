@@ -1,57 +1,49 @@
-@import url('https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap');
-@import '../abstracts/variables';
-
 #proyectos {
-  margin-bottom: 0px;
-  padding-bottom: 0px;
+  margin-bottom: 0;
+  padding-bottom: 0;
 
   .card-container {
     display: flex;
-  flex-wrap:wrap;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 2rem;
-     max-width:20rem;
-  margin: 0 auto;     
-  padding: 0 2rem;    
+    margin: 0 auto;
+    padding: 0 2rem;
   }
-  
+
   .badge {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  font-weight: bold;
-  background-color: #00bcd4; // Azul turquesa
-  color: white;
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-size: 12px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-weight: bold;
+    background-color: #00bcd4;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
   }
 
   .card {
-    margin: 25px 45px;
+    margin: 2rem 1rem;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     overflow: visible;
-    width: 300px;
-      flex: 1 1 clamp(220px, 28vw, 320px);
+    flex: 1 1 clamp(220px, 28vw, 320px);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
+    max-width: 16rem; 
     position: relative;
-    background-color: transparent;
-    
-    .card:hover {
-      transform: translateY(-5px);
-      
-    }
+
     &:hover {
       transform: translateY(-10px);
       box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
     }
-    
+
     .wrapper {
       overflow: hidden;
-      margin-bottom: 0;   
-      padding-bottom: 0; 
-      line-height: 0;     
-      
+      margin-bottom: 0;
+      padding-bottom: 0;
+      line-height: 0;
+
       .cover-image {
         width: 100%;
         height: 300px;
@@ -67,34 +59,28 @@
       position: absolute;
       top: -45px;
       left: 50%;
-      transform: translate(-50%, 0); /* centro horizontal */
+      transform: translate(-50%, 0);
       z-index: 2;
     }
 
-     @keyframes float {
-       0%   { transform: translate(-50%, 0); }
-       50%  { transform: translate(-50%, -10px); }
-       100% { transform: translate(-50%, 0); }
-     }
+    a {
+      display: block;
+      width: 100%;
+      text-align: center;
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      color: white;
+      border: none;
+      text-decoration: none;
+      padding: 10px 0;
+      font-weight: bold;
+      transition: background 0.3s ease;
 
-     a {
-    display: block;       
-    width: 100%;          
-    text-align: center;   
-    background: linear-gradient(to right, #6a11cb, #2575fc);
-    color: white;
-    border: none;
-    text-decoration: none;
-    padding: 10px 0;   
-    font-weight: bold;
-    transition: $gradient-title 0.3s ease;
-
-    &:hover {
-      background: linear-gradient(to right, #ff33aa, #5555ff);
-      cursor: pointer;
+      &:hover {
+        background: linear-gradient(to right, #ff33aa, #5555ff);
+        cursor: pointer;
+      }
     }
   }
-}
 
   @media (max-width: 768px) {
     .card-container {
@@ -102,4 +88,10 @@
       align-items: center;
     }
   }
+}
+
+@keyframes float {
+  0%   { transform: translate(-50%, 0); }
+  50%  { transform: translate(-50%, -10px); }
+  100% { transform: translate(-50%, 0); }
 }

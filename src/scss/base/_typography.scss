@@ -23,17 +23,25 @@ h3 {
 }
 
 p {
-  font-family: $font-secondary;
+  font-family: $font-title;
   letter-spacing: 1px;
-  font-size: 14px;
+  font-size: 1rem;
   color: $color-subtext;
 }
 
 //formulario
 .form-subtitle {
   text-align: center;
-  color: #fff;
+  color: $color-text;
   margin-bottom: 10px;
   font-weight: 600;
   font-size: 1.1rem;
+}
+
+.p-footer {
+  color: black !important;
+}
+
+.h3-footer {
+  color: black !important;
 }

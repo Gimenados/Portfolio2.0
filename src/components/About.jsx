@@ -1,31 +1,41 @@
-import React from 'react';
-
-// Image
-import about from '../image/foto1.png';
-
-// SOBREMI
+import React from "react";
+import aboutImg from "../image/foto1.png";
 
 const About = () => {
   return (
     <section className="container" id="sobremi">
       <h2 className="about-title">Sobre Mí</h2>
+
       <div className="about-container">
         <div className="ring">
           <i></i>
           <i></i>
           <i></i>
-          <img src={about} alt="Gimena Sande" className="perfil-img" />
+          <img src={aboutImg} alt="Gimena Sande" className="perfil-img" />
         </div>
+
         <div className="text-container">
           <h3>Hola, soy Gimena Sande</h3>
-          <p style={{fontWeight: '2.5rem', lineHeight: '2' }}>
-            Soy Desarrolladora Full Stack con experiencia en proyectos web y aplicaciones. Me especializo en crear interfaces atractivas y funcionales utilizando las mejores prácticas del desarrollo web moderno.
-<br /><br />
-Además, cuento con experiencia como Analista de Métricas, lo que complementa mi perfil técnico con una fuerte base en el manejo y la organización de información.
-<br /><br />
-Actualmente trabajo en proyectos que combinan mi pasión por el diseño, el desarrollo y la mejora continua, buscando siempre la excelencia en cada línea de código que escribo.
-<br /><br />
-Cuando no estoy programando, disfruto leer, explorar nuevas tecnologías y compartir conocimientos con la comunidad de desarrollo.
+
+          <p>
+            Soy Desarrolladora Full Stack con experiencia en proyectos web y
+            aplicaciones. Me especializo en interfaces atractivas y funcionales
+            utilizando buenas prácticas del desarrollo moderno.
+          </p>
+
+          <p>
+            También cuento con experiencia como Analista de Métricas, lo que
+            complementa mi perfil técnico con análisis y organización de datos.
+          </p>
+
+          <p>
+            Trabajo en proyectos que combinan diseño, desarrollo y mejora
+            continua, buscando siempre la excelencia.
+          </p>
+
+          <p>
+            Cuando no programo, disfruto leer, explorar nuevas tecnologías y
+            compartir conocimientos con la comunidad.
           </p>
         </div>
       </div>

@@ -12,7 +12,7 @@
 .carrusel-container {
   display: flex;
   gap: 20px;
-  justify-content: flex-start; /* Alinea los elementos al inicio */
+  justify-content: flex-start;
   width: 100%;
   max-width: 600px;
   overflow: hidden;
@@ -47,10 +47,6 @@
 }
 
 @keyframes scrollLeft {
-  0% {
-    transform: translate3d(0, 0, 0); /* Inicia en la posición original */
-  }
-  100% {
-    transform: translate3d(-50%, 0, 0); /* Desplaza la mitad del ancho del track */
-  }
+  0%   { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
 }
