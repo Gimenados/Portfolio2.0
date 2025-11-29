@@ -30,7 +30,6 @@ const Technologies = () => {
             src={avatar}
             alt="Tu avatar"
             className={`avatar ${animate ? 'animate' : ''}`}
-            style={{ width: '120px', height: 'auto' }}
           />
         </div>
       </div>
