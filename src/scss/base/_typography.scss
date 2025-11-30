@@ -1,7 +1,7 @@
 @import '../abstracts/variables';
 
 h1, h2, h3, p {
-  color: $color-text;
+  color: black;
   font-weight: 600;
   letter-spacing: 0.3px;
 }
@@ -17,7 +17,7 @@ h2 {
 }
 
 h3 {
-  color: #D8B4FE;
+  color: #000000;
   font-size: $h3-size;
   margin-bottom: 10px;
 }
@@ -26,13 +26,13 @@ p {
   font-family: $font-title;
   letter-spacing: 1px;
   font-size: 1rem;
-  color: $color-subtext;
+  color:black;
 }
 
 //formulario
 .form-subtitle {
   text-align: center;
-  color: $color-text;
+  color: black;
   margin-bottom: 10px;
   font-weight: 600;
   font-size: 1.1rem;
@@ -44,4 +44,125 @@ p {
 
 .h3-footer {
   color: black !important;
+}
+
+//Footer
+/* Footer burbujeante */
+.bubble-footer {
+  --footer-background: #ffffff;
+  position: relative;
+  margin-top: 8rem;
+  /* la parte de arriba de tu página sigue con el color que ya tenés */
+}
+
+/* Capa donde están las burbujas y la “ola” */
+.bubble-footer__bubbles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1rem;
+  background: var(--footer-background);
+  filter: url("#blob");
+  overflow: visible;
+}
+
+.bubble-footer__bubbles .bubble {
+  position: absolute;
+  left: var(--position, 50%);
+  background: var(--footer-background);
+  border-radius: 100%;
+  transform: translate(-50%, 100%);
+  animation:
+    bubble-size var(--time, 4s) ease-in infinite var(--delay, 0s),
+    bubble-move var(--time, 4s) ease-in infinite var(--delay, 0s);
+}
+
+/* Contenido del footer (franja inferior) */
+.bubble-footer__content {
+  position: relative;
+  z-index: 2;
+  margin-top: 1rem;            /* espacio para que entren las burbujas */
+  padding: 2rem 2rem 1.5rem;
+  background: var(--footer-background);
+  color: black;
+}
+
+.bubble-footer__content a {
+  color: black;
+  text-decoration: none;
+}
+
+.bubble-footer__content a:hover {
+  text-decoration: underline;
+}
+
+.footer-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.footer-columns b {
+  color: black;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.footer-columns a {
+  display: inline-block;
+  font-size: 0.85rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.footer-right {
+  margin-top: 1.25rem;
+  text-align: right;
+  font-size: 0.75rem;
+  opacity: 0.85;
+}
+
+/* SVG del filtro, escondido fuera de la vista */
+.footer-svg {
+  position: fixed;
+  top: 100vh;
+  left: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+/* Animaciones originales */
+@keyframes bubble-size {
+  0%,
+  75% {
+    width: var(--size, 4rem);
+    height: var(--size, 4rem);
+  }
+  100% {
+    width: 0;
+    height: 0;
+  }
+}
+
+@keyframes bubble-move {
+  0% {
+    bottom: -4rem;
+  }
+  100% {
+    bottom: var(--distance, 10rem);
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .bubble-footer__content {
+    padding: 1.5rem 1.25rem 1.25rem;
+  }
+
+  .footer-right {
+    text-align: left;
+  }
 }

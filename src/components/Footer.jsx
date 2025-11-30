@@ -1,40 +1,88 @@
 import React from "react";
 
-const Footer = () => {
+const FooterBubbles = () => {
+  const bubbles = Array.from({ length: 80 });
+
   return (
-    <div className="header">
-      <div>
-        <svg
-          className="waves"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 24 150 28"
-          preserveAspectRatio="none"
-          shapeRendering="auto"
-        >
-          <defs>
-            <path
-              id="gentle-wave"
-              d="M-160 44c30 0 58-18 88-18s58 18 88 18 58-18 88-18 58 18 88 18v44h-352z"
+    <>
+      {/* Filtro SVG para el efecto “blob” */}
+      <svg className="footer-svg" aria-hidden="true">
+        <defs>
+          <filter id="blob">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+            <feColorMatrix
+              in="blur"
+              mode="matrix"
+              values="1 0 0 0 0  
+                      0 1 0 0 0  
+                      0 0 1 0 0  
+                      0 0 0 19 -9"
+              result="blob"
             />
-          </defs>
+          </filter>
+        </defs>
+      </svg>
 
-          <g className="parallax">
-            <use xlinkHref="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7)" />
-            <use xlinkHref="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
-            <use xlinkHref="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
-            <use xlinkHref="#gentle-wave" x="48" y="7" fill="#fff" />
-          </g>
-        </svg>
-      </div>
+      <footer className="bubble-footer">
+        {/* Capa de burbujas arriba */}
+        <div className="bubble-footer__bubbles">
+          {bubbles.map((_, i) => {
+            const size = 2 + Math.random() * 4;
+            const distance = 6 + Math.random() * 4;
+            const position = -5 + Math.random() * 110;
+            const time = 2 + Math.random() * 2;
+            const delay = -1 * (2 + Math.random() * 2);
 
-      <div className="content flex">
-        <footer>
-          <h3 className="h3-footer">© 2025 Todos los derechos reservados</h3>
-          <p className="p-footer">Página hecha con ❤️ por Gime Sande</p>
-        </footer>
-      </div>
-    </div>
+            return (
+              <div
+                key={i}
+                className="bubble"
+                style={{
+                  "--size": `${size}rem`,
+                  "--distance": `${distance}rem`,
+                  "--position": `${position}%`,
+                  "--time": `${time}s`,
+                  "--delay": `${delay}s`,
+                }}
+              />
+            );
+          })}
+        </div>
+
+        <div className="bubble-footer__content">
+          <div className="footer-columns">
+            <div>
+              <b>Proyectos</b>
+              <a href="#proyectos">Películas</a>
+              <a href="#proyectos">Restaurante</a>
+              <a href="#proyectos">Juguetería</a>
+            </div>
+            <div>
+              <b>Secciones</b>
+              <a href="#inicio">Inicio</a>
+              <a href="#sobremi">Sobre mí</a>
+              <a href="#tecnologias">Tecnologías</a>
+              <a href="#contacto">Contacto</a>
+            </div>
+            <div>
+              <b>Contacto</b>
+              <a href="mailto:tucorreo@ejemplo.com">tucorreo@ejemplo.com</a>
+              <a href="https://github.com/tuusuario" target="_blank" rel="noreferrer">
+                GitHub
+              </a>
+              <a href="https://www.linkedin.com/in/tuusuario" target="_blank" rel="noreferrer">
+                LinkedIn
+              </a>
+            </div>
+          </div>
+
+          <div className="footer-right">
+            <p>©{new Date().getFullYear()} Sebastián Brusca</p>
+          </div>
+        </div>
+      </footer>
+    </>
   );
 };
 
-export default Footer;
+export default FooterBubbles;
