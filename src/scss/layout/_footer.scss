@@ -1,0 +1,123 @@
+.bubble-footer {
+  --footer-background: #ffffff;
+  position: relative;
+  margin-top: 8rem;
+ 
+}
+
+.bubble-footer__bubbles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1rem;
+  background: var(--footer-background);
+  filter: url("#blob");
+  overflow: visible;
+}
+
+.bubble-footer__bubbles .bubble {
+  position: absolute;
+  top: -2rem;                  /* salen desde arriba */
+  left: var(--position, 50%);
+  background: var(--footer-background);
+  border-radius: 50%;
+  transform: translateX(-50%);
+  animation: bubble-size var(--time, 4s) ease-in-out infinite var(--delay, 0s);
+}
+
+/* Texto dentro del footer en negro */
+.bubble-footer__content p,
+.bubble-footer__content h2,
+.bubble-footer__content h3,
+.bubble-footer__content a,
+.bubble-footer__content b,
+.bubble-footer__content span,
+.bubble-footer__content li {
+  color: #000000 !important;
+}
+
+.bubble-footer__content {
+  position: relative;
+  z-index: 2;
+  margin-top: 1rem;            
+  padding: 2rem 2rem 1.5rem;
+  background: var(--footer-background);
+  color: #000000 !important; /* TEXTO NEGRO */
+}
+
+.bubble-footer__content a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.bubble-footer__content a:hover {
+  text-decoration: underline;
+}
+
+.footer-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.footer-columns b {
+  color: rgb(255, 255, 255);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.footer-columns a {
+  display: inline-block;
+  font-size: 0.85rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.footer-right {
+  margin-top: 1.25rem;
+  text-align: right;
+  font-size: 0.75rem;
+  opacity: 0.85;
+}
+
+.footer-svg {
+  position: fixed;
+  top: 100vh;
+  left: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+
+@keyframes bubble-size {
+  0% {
+    width: 0;
+    height: 0;
+  }
+  100% {
+    width: var(--size, 4rem);
+    height: var(--size, 4rem);
+  }
+}
+
+@keyframes bubble-move {
+  0% {
+    bottom: -4rem;
+  }
+  100% {
+    bottom: var(--distance, 10rem);
+  }
+}
+
+@media (max-width: 600px) {
+  .bubble-footer__content {
+    padding: 1.5rem 1.25rem 1.25rem;
+  }
+
+  .footer-right {
+    text-align: left;
+  }
+}

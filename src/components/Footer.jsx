@@ -77,7 +77,7 @@ const FooterBubbles = () => {
           </div>
 
           <div className="footer-right">
-            <p>©{new Date().getFullYear()} Sebastián Brusca</p>
+            <p>©{new Date().getFullYear()} Gimena Sande</p>
           </div>
         </div>
       </footer>
