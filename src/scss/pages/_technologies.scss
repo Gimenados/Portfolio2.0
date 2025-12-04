@@ -9,25 +9,25 @@ article {
 .card-container {
   display: flex;
   max-width: 80rem;
-  margin-top: 20px !important;
-  margin-bottom: 70px;
+  margin-top: 1.25rem !important;
+  margin-bottom: 3.75rem;
   flex-direction: row;
   align-items: stretch;
 }
 
 .section-avatar {
-  margin-left: 70px;
-  margin-bottom: 50px;
+  margin-left: 3.75rem;
+  margin-bottom: 3.5rem;
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  width: 120px;
+  width: 6rem;
+  height: 6rem;
   z-index: 0;
-  height: 120px;
 }
 
 .avatar {
-  width: 10rem;
+  width: 7.5rem;
   height: auto;
   filter: drop-shadow(1px 1px 30px #0a3655);
   z-index: 5;
@@ -40,9 +40,3 @@ article {
     opacity: 1;
   }
 }
-
-// .avatar {
-//   width: 10rem;
-//   height: auto;
-//   transition: all 0.3s ease;
-// }

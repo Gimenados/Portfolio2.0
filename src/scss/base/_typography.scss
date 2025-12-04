@@ -3,7 +3,7 @@
 h1, h2, h3, p {
   color: rgb(255, 249, 249);
   font-weight: 600;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.2px;
 }
 
 h2 {
@@ -25,17 +25,16 @@ h3 {
 p {
   font-family: $font-title;
   letter-spacing: 1px;
-  font-size: 1rem;
+  font-size: 0.8rem;
   color:rgb(255, 255, 255);
 }
 
-//formulario
 .form-subtitle {
   text-align: center;
   color: rgb(255, 255, 255);
   margin-bottom: 10px;
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
 }
 
 .p-footer {

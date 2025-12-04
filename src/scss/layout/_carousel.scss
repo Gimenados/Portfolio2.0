@@ -11,7 +11,7 @@
 
 .carrusel-container {
   display: flex;
-  gap: 20px;
+  gap: 1.25rem;
   justify-content: flex-start;
   width: 100%;
   max-width: 600px;
@@ -25,7 +25,7 @@
   justify-content: center;
   min-width: 5em;
   text-align: center;
-  padding: 20px;
+  padding: 1.25rem;
 }
 
 .carrusel-track {
@@ -36,8 +36,8 @@
 }
 
 .carrusel-item img {
-  width: 60px;
-  height: 60px;
+  width: 3.75rem;
+  height: 3.75rem;
   margin-bottom: 10px;
 }
 

@@ -37,7 +37,7 @@
 
 .icon-container {
   display: flex;
-  gap: 40px;
+  gap: 2.5rem;
   position: relative;
   flex-direction: row;
   z-index: 3;
@@ -48,8 +48,8 @@
     border-radius: 50%;
     justify-content: center;
     position: relative;
-    height: 55px;
-    width: 55px;
+    height: 3.4375rem;
+    width: 3.4375rem;
 
     &:hover {
       background-color: $color-hover;

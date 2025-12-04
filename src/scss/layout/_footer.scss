@@ -2,31 +2,32 @@
   --footer-background: #ffffff;
   position: relative;
   margin-top: 8rem;
- 
+  overflow: visible;    
 }
 
 .bubble-footer__bubbles {
   position: absolute;
-  top: 0;
+  top: 0rem;              /* sube las gotas para que entren al azul */
   left: 0;
   right: 0;
-  height: 1rem;
+  height: 9rem;
   background: var(--footer-background);
   filter: url("#blob");
   overflow: visible;
 }
 
 .bubble-footer__bubbles .bubble {
-  position: absolute;
-  top: -2rem;                  /* salen desde arriba */
+ position: absolute;
   left: var(--position, 50%);
+  bottom: -4rem;           /* que arranquen desde abajo del contenedor */
   background: var(--footer-background);
   border-radius: 50%;
   transform: translateX(-50%);
-  animation: bubble-size var(--time, 4s) ease-in-out infinite var(--delay, 0s);
+  animation:
+    bubble-size var(--time, 4s) ease-in-out infinite var(--delay, 0s),
+    bubble-move var(--time, 4s) ease-in-out infinite var(--delay, 0s);
 }
 
-/* Texto dentro del footer en negro */
 .bubble-footer__content p,
 .bubble-footer__content h2,
 .bubble-footer__content h3,
@@ -38,12 +39,12 @@
 }
 
 .bubble-footer__content {
-  position: relative;
+   position: relative;
   z-index: 2;
-  margin-top: 1rem;            
-  padding: 2rem 2rem 1.5rem;
+  margin-top: 0;
+  padding: 3.5rem 2rem 3.5rem;  /* espacio arriba para las gotas */
   background: var(--footer-background);
-  color: #000000 !important; /* TEXTO NEGRO */
+  color: #000000 !important;
 }
 
 .bubble-footer__content a {
