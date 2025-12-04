@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import coctel from "../image/coctel.png";
 import restaurante from "../image/restaurante.png";
@@ -8,17 +8,21 @@ import jugueteria from "../image/jugueteria.png";
 import palomitas from "../image/palomitas-de-maiz.png";
 import peliculas from "../image/peliculas.png";
 
-const projects = [
+const projectsData = [
   {
     title: "Películas",
     stack: "Fullstack",
+    category: "fullstack",
+    status: "completado",
     characterImg: palomitas,
     coverImg: peliculas,
     link: palomitas,
   },
   {
     title: "Restaurante",
-    stack: "Fullstack",
+    stack: "Frontend",
+    category: "frontend",
+    status: "en-curso",
     characterImg: restauranteIcon,
     coverImg: restaurante,
     link: coctel,
@@ -26,25 +30,56 @@ const projects = [
   {
     title: "Juguetería",
     stack: "Fullstack",
+    category: "fullstack",
+    status: "completado",
     characterImg: oso,
     coverImg: jugueteria,
     link: oso,
   },
 ];
 
+// FILTROS DISPONIBLES
+const filters = ["todos", "frontend", "fullstack"];
+
 const Proyectos = () => {
+  const [activeFilter, setActiveFilter] = useState("todos");
+
+  const filteredProjects =
+    activeFilter === "todos"
+      ? projectsData
+      : projectsData.filter((p) => p.category === activeFilter);
+
   return (
     <section className="container" id="proyectos">
       <h2 className="about-title">Proyectos</h2>
 
+      {/* FILTROS */}
+      <div className="filters">
+        {filters.map((f) => (
+          <button
+            key={f}
+            onClick={() => setActiveFilter(f)}
+            className={`filter-btn ${activeFilter === f ? "active-filter" : ""}`}
+          >
+            {f.charAt(0).toUpperCase() + f.slice(1)}
+          </button>
+        ))}
+      </div>
+
+      {/* GRID */}
       <div className="card-container">
-        {projects.map((p, i) => (
+        {filteredProjects.map((p, i) => (
           <div className="project-card" key={i}>
             <div className="project-inner">
               <p className="heading">{p.title}</p>
 
-              {/* Tag / chip de categoría */}
+              {/* Tag / categoría */}
               <span className="tag">{p.stack}</span>
+
+              {/* ESTADO */}
+              <span className={`status-chip ${p.status}`}>
+                {p.status === "completado" ? "✔ Completado" : "⏳ En curso"}
+              </span>
 
               <div className="wrapper">
                 <img
@@ -78,4 +113,3 @@ const Proyectos = () => {
 };
 
 export default Proyectos;
-

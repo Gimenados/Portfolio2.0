@@ -4,7 +4,7 @@ import aboutImg from "../image/foto1.png";
 const About = () => {
   return (
     <section className="container" id="sobremi">
-      <h2 className="about-title">Sobre Mí</h2>
+      <h2 className="about-title reveal reveal-up">Sobre Mí</h2>
 
       <div className="about-container">
         <div className="ring">
@@ -15,7 +15,7 @@ const About = () => {
         </div>
 
         <div className="text-container">
-          <h3>Hola, soy Gimena Sande</h3>
+          <h3 className="reveal">Hola, soy Gimena Sande</h3>
 
           <p>
             Soy Desarrolladora Full Stack con experiencia en proyectos web y

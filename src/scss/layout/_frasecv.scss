@@ -1,0 +1,43 @@
+.frasecv-container {
+  text-align: center;
+  margin: 2rem 0 3rem;
+}
+
+.typing {
+  width: fit-content;
+  margin: 4rem auto 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #9747ff;
+  animation: typing 3.5s steps(40) 1s forwards,
+             blink 0.6s infinite;
+  color: #ffffff;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+.btn-cv {
+  display: inline-block;
+  padding: 0.7rem 1.4rem;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #a855f7, #ec4899);
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+  box-shadow: 0 0 10px #9747ff80;
+}
+
+.btn-cv:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 18px #9747ffb0;
+}
