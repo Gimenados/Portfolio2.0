@@ -1,3 +1,132 @@
+// @import '../abstracts/variables';
+
+// .nav-container {
+//   display: flex;
+//   justify-content: space-around;
+//   padding: 1.25rem 0;
+//   width: 100%;
+// }
+
+// header {
+//   @include flex-center;
+//   align-items: center;
+//   backdrop-filter: blur(4px);
+//   border-radius: 10px;
+//   opacity: 0.9;
+//   box-shadow: 0 4px 8px $color-shadow;
+//   position: fixed;
+//   width: 60%;
+//   z-index: 1000;
+
+//   nav ul {
+//     display: flex;
+//     gap: 1.25rem;
+//     margin: 0;
+//     padding: 10px 0;
+//     list-style: none;
+
+//     li {
+//       font-size: 1rem;
+//       margin: 0 10px;
+//       transition: opacity $transition-fast;
+
+//       &.icon {
+//         opacity: 1;
+//         pointer-events: none;
+//       }
+
+//       a {
+//         color: white;
+//         display: inline-block;
+//         font-weight: 400;
+//         text-decoration: none;
+//         transition: color $transition-fast;
+
+//         &::after {
+//           content: '';
+//           position: relative;
+//           bottom: -2px;
+//           left: 0;
+//           height: 2px;
+//           width: 0;
+//           background-color: currentColor;
+//           transition: width $transition-fast;
+//         }
+//       }
+
+//       &:hover a::after {
+//         width: 100%;
+//       }
+//     }
+
+//     &:hover li {
+//       opacity: 0.6;
+
+//       &.icon,
+//       &:hover {
+//         opacity: 1;
+//       }
+//     }
+//   }
+// }
+
+// .icon-navbar {
+//   width: 30px !important;
+// }
+
+// .hamburger {
+//   display: none;
+//   flex-direction: column;
+//   gap: 5px;
+//   cursor: pointer;
+//   position: absolute;
+//   left: 1.25rem;
+//   top: 1.1rem;
+//   z-index: 2000;
+
+//   span {
+//     width: 1.4rem;
+//     height: 3px;
+//     background: white;
+//     border-radius: 5px;
+//   }
+// }
+
+// @media (max-width: 900px) {
+//   .nav-container {
+//     justify-content: flex-start;
+//     padding-top: 1.2rem;
+//   }
+
+//   header {
+//     all: unset !important;   
+//     display: block;
+//     position: static;  
+//     background: transparent !important;
+//     box-shadow: none !important;
+//     backdrop-filter: none !important;
+//     border-radius: 0 !important;
+//     width: auto !important;
+//     left: 0 !important;
+//     padding: 0 !important;
+//   }
+
+//   .hamburger {
+//     display: flex;
+//   }
+// }
+//   header nav.open {
+//     display: block;
+//     position: fixed;
+//     top: 0.9rem;
+//     left: 0.9rem;
+//     width: 14rem;
+//     max-width: 80vw;
+//     padding: 1.2rem 1rem;
+//     border-radius: 1rem;
+
+//   }
+
 @import '../abstracts/variables';
 
 .nav-container {
@@ -5,6 +134,22 @@
   justify-content: space-around;
   padding: 1.25rem 0;
   width: 100%;
+}
+
+/* ⬇️ FONDO OSCURO DETRÁS DEL MENÚ */
+.nav-backdrop {
+  position: fixed;
+  inset: 0; // top:0; right:0; bottom:0; left:0;
+  background: rgba(0, 0, 0, 0.6); // tono oscuro similar al nav
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity $transition-fast;
+  z-index: 900; // por debajo del header (1000)
+}
+
+.nav-backdrop.show {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 header {
@@ -87,8 +232,48 @@ header {
   span {
     width: 1.4rem;
     height: 3px;
-    background: white;
+    background: #ffffffd6;
     border-radius: 5px;
   }
 }
 
+@media (max-width: 900px) {
+  .nav-container {
+    justify-content: flex-start;
+    padding-top: 1.2rem;
+  }
+
+  header {
+    all: unset !important;
+    display: block;
+    position: static;
+    background: transparent !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    border-radius: 0 !important;
+    width: auto !important;
+    left: 0 !important;
+    padding: 0 !important;
+  }
+
+  .hamburger {
+    display: flex;
+
+  }
+
+  header nav.open {
+    display: block;
+    position: fixed;
+    top: 0.9rem;
+    left: 0.9rem;
+    width: 14rem;
+    max-width: 80vw;
+    padding: 1.2rem 1rem;
+    border-radius: 1rem;
+    z-index: 1001; // por encima del backdrop
+  }
+
+  header nav ul {
+    flex-direction: column;
+  }
+}

@@ -99,7 +99,7 @@ const Proyectos = () => {
                   href={p.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="project-link"
+                  className="filter-btn"
                 >
                   Ver más
                 </a>

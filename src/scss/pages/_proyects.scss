@@ -32,7 +32,7 @@
     width: 14rem;
     height: 20rem;      
     border-radius: 1.125rem; 
-    background: linear-gradient(-45deg, #dc00ff 0%, #406eff 100%);
+    background: linear-gradient(-45deg, #dc00ffa1 0%, #406eff8f 100%);
     z-index: -1;
     pointer-events: none;
     transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -179,13 +179,15 @@
 }
 
 .filter-btn {
-  padding: 0.5rem 1.2rem;
+  padding: 0.3rem 1.2rem;
   border-radius: 20px;
   border: 1px solid #9747ff;
   background: transparent;
   color: white;
   cursor: pointer;
   transition: 0.2s;
+  text-decoration: none !important;
+  font-weight: 600;
 }
 
 .filter-btn:hover {
@@ -198,12 +200,17 @@
 
 /* ESTADO DEL PROYECTO */
 .status-chip {
-  display: inline-block;
-  margin: 0.5rem 0;
-  padding: 0.3rem 0.8rem;
-  border-radius: 12px;
+   display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.28rem 0.9rem;
+  border-radius: 999px;
   font-size: 0.75rem;
   font-weight: 600;
+
+  width: fit-content;   // ⭐ CLAVE PARA QUE NO SE EXPANDA
+  align-self: center;   // ⭐ SE CENTRA EN EL CONTENEDOR
 }
 
 .completado {
@@ -235,3 +242,4 @@
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
