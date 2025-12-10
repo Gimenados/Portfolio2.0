@@ -1,5 +1,5 @@
 import React from "react";
-// import "./FraseCV.css";
+import cvGimena from "../image/CurriculumVitae.pdf";
 
 const FraseCV = () => {
   return (
@@ -9,8 +9,8 @@ const FraseCV = () => {
       </p>
 
       <a
-        href="/cv-gimena.pdf"
-        download
+        href={cvGimena}
+        download="Gimena-Sande-CV.pdf"
         className="btn-cv"
       >
         Descargar CV
