@@ -9,7 +9,7 @@ const About = () => {
   useEffect(() => {
     const loadStatus = async () => {
       try {
-        const res = await fetch("/api/status", { cache: "no-store" });
+        const res = await fetch("http://localhost:3001/status", { cache: "no-store" });
         const data = await res.json();
         setStatus(data);
       } catch (error) {
