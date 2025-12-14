@@ -4,14 +4,14 @@ import cvGimena from "../image/CurriculumVitae.pdf";
 const FraseCV = () => {
   return (
     <div className="frasecv-container">
-      <p className="typing">
+      <p className="typing reveal">
         Transformo ideas en interfaces modernas, rápidas y funcionales.
       </p>
 
       <a
         href={cvGimena}
         download="Gimena-Sande-CV.pdf"
-        className="btn-cv"
+        className="btn-cv reveal"
       >
         Descargar CV
       </a>
