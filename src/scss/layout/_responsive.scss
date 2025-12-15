@@ -8,8 +8,15 @@
     margin-right: 2rem !important;
   }
 
-  .hero p, .typing {
+  .hero p {
     font-size: 0.8rem;
+    margin: 1rem 3rem;
+  } 
+
+  .typing {
+    font-size: 0.8rem;
+    margin: 2rem 0rem;
+    width: 100%;
   }
 
   .hero h1 {

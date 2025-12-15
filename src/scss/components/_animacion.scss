@@ -1,4 +1,5 @@
 .ring {
+  animation-play-state: paused;
   position: relative;
   display: flex;
   justify-content: center;
@@ -48,6 +49,10 @@
     border: 0.25rem solid #0b4066;
     filter: drop-shadow(0 0 20px #0b4066);
   }
+}
+
+.reveal-visible .ring i {
+  animation-play-state: running;
 }
 
 /* Estado inicial */

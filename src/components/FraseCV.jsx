@@ -4,7 +4,7 @@ import cvGimena from "../image/CurriculumVitae.pdf";
 const FraseCV = () => {
   return (
     <div className="frasecv-container">
-      <p className="typing reveal">
+      <p className="typing">
         Transformo ideas en interfaces modernas, rápidas y funcionales.
       </p>
 
